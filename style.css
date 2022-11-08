@@ -1,0 +1,281 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+
+:root {
+  --Strong-cyan: hsl(172, 67%, 45%);
+  --Very-dark-cyan: hsl(183, 100%, 15%);
+  --Dark-grayish-cyan: hsl(186, 14%, 43%);
+  --Grayish-cyan: hsl(184, 14%, 56%);
+  --Light-grayish-cyan: hsl(185, 41%, 84%);
+  --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --White: hsl(0, 0%, 100%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: "Space Mono", sans-serif;
+  background-color: var(--Light-grayish-cyan);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-size: 32px;
+  color: var(--Very-dark-cyan);
+  text-transform: uppercase;
+  line-height: 1.25;
+  margin-bottom: 50px;
+}
+
+#main-container {
+  width: 900px;
+  height: 440px;
+  display: flex;
+  gap: 20px;
+  background-color: var(--White);
+  padding: 30px;
+  border-radius: 25px;
+}
+
+.left,
+.right {
+  height: 100%;
+  flex: 1;
+}
+
+.label {
+  color: var(--Dark-grayish-cyan);
+  margin-bottom: 10px;
+}
+
+.input-container:first-of-type {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.input-container:last-of-type {
+  position: relative;
+  margin-bottom: 0;
+}
+
+input {
+  width: 100%;
+  height: 35px;
+  background-color: var(--Very-light-grayish-cyan);
+  outline: none;
+  border: none;
+  text-align: right;
+  font-size: 24px;
+  color: var(--Very-dark-cyan);
+  padding: 20px;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+input:focus {
+  outline: 2px solid var(--Very-dark-cyan);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  appearance: none;
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input {
+  appearance: none;
+  -moz-appearance: textfield;
+}
+
+.icon {
+  position: absolute;
+  top: 25%;
+  left: 5%;
+}
+
+.select-tip {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.tip {
+  background-color: var(--Very-dark-cyan);
+  color: var(--White);
+  font-size: 24px;
+  font-weight: 700;
+  width: 120px;
+  padding: 10px 0;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.tip:hover {
+  background-color: var(--Light-grayish-cyan);
+  color: var(--Very-dark-cyan);
+}
+
+input.tip {
+  display: block;
+  height: 100%;
+  background-color: var(--Very-light-grayish-cyan);
+  color: var(--Very-dark-cyan);
+  text-align: center;
+}
+
+.people-label-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.error-message {
+    margin-bottom: 10px;
+    color: red;
+
+    display: none;
+}
+
+.right {
+  background-color: var(--Very-dark-cyan);
+  border-radius: 25px;
+  padding: 20px;
+}
+
+.tip-amount-wrapper,
+.total-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+}
+
+.tip-amount-wrapper {
+  margin: 30px 0;
+}
+
+.total-wrapper {
+  margin-bottom: 100px;
+}
+
+.tip-amount .label,
+.total-amount .label {
+  color: var(--White);
+}
+
+.per-person {
+  display: block;
+  color: var(--Grayish-cyan);
+  margin-top: -10px;
+}
+
+.tip-per-person,
+.total-per-person {
+  font-size: 40px;
+  color: var(--Strong-cyan);
+}
+
+.reset {
+  display: block;
+  width: 85%;
+  margin: 0 auto;
+  padding: 15px 0;
+  background-color: var(--Strong-cyan);
+  color: var(--Dark-grayish-cyan);
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 700;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.reset:hover {
+  background-color: var(--Light-grayish-cyan);
+  color: var(--Very-dark-cyan);
+}
+
+.reset:active {
+  transform: scale(0.98);
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    height: 100%;
+  }
+
+  .title {
+    margin-bottom: 25px;
+  }
+
+  #main-container {
+    width: 90%;
+    height: 100%;
+    flex-direction: column;
+    margin-bottom: 25px;
+  }
+
+  .input-container:first-of-type {
+    margin-bottom: 20px;
+  }
+
+  .tip {
+    width: 48%;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+  }
+
+  .tip-amount-wrapper,
+  .total-wrapper {
+    padding: 0;
+  }
+
+  .total-wrapper {
+    margin-bottom: 25px;
+  }
+
+  .reset {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  #main-container {
+    width: 85%;
+    padding: 20px;
+  }
+
+  .input-container:first-of-type {
+    margin-bottom: 20px;
+  }
+
+  .tip {
+    width: 48%;
+  }
+
+  .select-tip {
+    margin-bottom: 20px;
+  }
+
+  .tip-amount-wrapper,
+  .total-wrapper {
+    padding: 0 15px;
+  }
+}

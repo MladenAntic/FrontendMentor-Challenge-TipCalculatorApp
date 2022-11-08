@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tip Calculator App</title>
+    <link
+      rel="shortcut icon"
+      href="images/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h3 class="title">
+      Spli <br />
+      tter
+    </h3>
+
+    <main id="main-container">
+      <section class="left">
+        <h4 class="label">Bill</h4>
+        <div class="input-container">
+          <input type="number" class="bill" placeholder="0" />
+          <span class="icon dollar-icon"
+            ><img src="images/icon-dollar.svg" alt=""
+          /></span>
+        </div>
+
+        <h4 class="label">Select Tip %</h4>
+        <div class="select-tip">
+          <button class="tip">5%</button>
+          <button class="tip">10%</button>
+          <button class="tip">15%</button>
+          <button class="tip">25%</button>
+          <button class="tip">50%</button>
+          <input type="number" class="tip" placeholder="Custom" />
+        </div>
+
+        <div class="people-label-wrapper">
+          <h4 class="label">Number of People</h4>
+          <span class="error-message">Can't be zero</span>
+        </div>
+        <div class="input-container">
+          <input type="number" class="people" placeholder="0" required />
+          <span class="icon person-icon"
+            ><img src="images/icon-person.svg" alt=""
+          /></span>
+        </div>
+      </section>
+
+      <section class="right">
+        <div class="tip-amount-wrapper">
+          <div class="tip-amount">
+            <h4 class="label">Tip Amount</h4>
+            <small class="per-person">/ person</small>
+          </div>
+
+          <h2 class="tip-per-person">$0.00</h2>
+        </div>
+
+        <div class="total-wrapper">
+          <div class="total-amount">
+            <h4 class="label">Total</h4>
+            <small class="per-person">/ person</small>
+          </div>
+
+          <h2 class="total-per-person">$0.00</h2>
+        </div>
+
+        <button class="reset">Reset</button>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
